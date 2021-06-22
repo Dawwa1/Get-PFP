@@ -18,7 +18,7 @@ async def getpfp(ctx, member: discord.Member = None):
             member = ctx.author
             embed=discord.Embed()
             embed.set_image(url=member.avatar_url)
-            embed.set_footer("Developed by Dawwa#5056 - https://bit.ly/35FQ0nS")
+            embed.set_footer("Developed by Dawwa#5056")
             await ctx.send(embed=embed)
         elif member:
             embed=discord.Embed()

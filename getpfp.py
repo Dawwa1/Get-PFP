@@ -14,12 +14,8 @@ async def on_ready():
 
 @client.command()
 async def getpfp(ctx, member: discord.Member = None):
-    if member:
-        pfp = member.avatar_url
-        await ctx.send(pfp)
-    elif not member:
-        member = ctx.author
-        pfp = member.avatar_url
-        await ctx.send(pfp)
+        if member == None:
+            member = ctx.author
+        await ctx.send(embed=discord.Embed().set_image(url=member.avatar_url))
 
 client.run(token)
